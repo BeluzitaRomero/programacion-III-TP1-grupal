@@ -41,7 +41,7 @@ const saveAllChars = async () => {
     const jsonData = JSON.stringify(res, null, 2);
     fs.writeFileSync("data.json", jsonData, "UTF-8");
     return "2) y 3) Se han guardado todos los personajes";
-  } catch (ee) {
+  } catch (err) {
     console.error("Error al crear archivo: ", err);
   }
 };
