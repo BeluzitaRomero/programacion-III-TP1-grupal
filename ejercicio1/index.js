@@ -10,9 +10,14 @@ const fs = require("fs");
 // c) Eliminar los personajes cuyo ID sean mayores a 25 y sobrescribir el archivo original.
 
 //1)
-const findNedStark = () => {
-  return fetch(`https://thronesapi.com/api/v2/Characters/6`)
-    .then((res) => res.json())
+const findNedStark = async () => {
+  return await fetch(`https://thronesapi.com/api/v2/Characters/6`)
+    .then((res) => {
+      if (!res.ok) {
+        console.log(`Error de status: ${res.status}`);
+      }
+      return res.json();
+    })
     .then((data) => {
       console.log(`1) ${data.fullName} encontrado`);
       return data;
@@ -21,16 +26,16 @@ const findNedStark = () => {
 };
 
 //2)
-const getAllChars = () => {
-  return fetch("https://thronesapi.com/api/v2/Characters")
+const getAllChars = async () => {
+  return await fetch("https://thronesapi.com/api/v2/Characters")
     .then((res) => {
       if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
+        console.log(`Error de status: ${res.status}`);
       }
       return res.json();
     })
     .catch((err) => {
-      console.error("Error fetching characters:", err);
+      console.error("Error al buscar personajes:", err);
     });
 };
 
