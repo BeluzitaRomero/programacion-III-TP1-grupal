@@ -2,13 +2,14 @@
 ## Repaso JavasScript: Array, API fetch, FileSystem
 
 ## Integrantes
-- [Aquino, Carla]
-- [Bordet, Gastón]
-- [Gauthier, Gustavo]
-- [Romero, Belen]
-- [Strugo, Florencia]
+- Aquino, Carla
+- Bordet, Gastón
+- Gauthier, Gustavo
+- Romero, Belen
+- Strugo, Florencia
 
-- ## Descripción del Trabajo
+## Descripción del Trabajo
+### Ejercicio 1
 En este trabajo práctico se implementan varias funciones para interactuar con una API de personajes de Game of Thrones, y se almacenan, filtran y modifican los datos de los personajes en un archivo JSON local.
 
 ### Funciones Implementadas
@@ -19,6 +20,10 @@ En este trabajo práctico se implementan varias funciones para interactuar con u
 5. **getStarksFamily:** Muestra por consola los personajes de la familia Stark.
 6. **addChar:** Agrega un nuevo personaje random al archivo JSON.
 7. **deleteCharsGreaterThan:** Elimina los personajes cuyo ID sea mayor a un valor específico y sobrescribe el archivo JSON.
+
+### Ejercicio 2
+
+### Funciones Implementadas
 
 ## Instrucciones de Uso
 1. Clonar el repositorio.
